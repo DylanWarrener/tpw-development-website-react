@@ -1,0 +1,109 @@
+/* Somehow import these colours from somewhere else */
+$base-color: white;
+$secondary-colour: grey;
+$accent-color: purple;
+
+$border-color: red;
+
+.header {
+    display: flex;
+    max-height: 10vh;
+
+    .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 2;
+        flex-shrink: 2;
+
+        .logo {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .nav-links-container {
+        flex-grow: 10;
+        flex-shrink: 10;
+        border: 1px solid $border-color;
+
+        display: flex;
+
+        .nav-links {
+            list-style-type: none;
+            flex-grow: 1;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border: 1px solid $border-color;
+
+            li {
+                position: relative;
+                border: 1px solid $border-color;
+                * {
+                    text-decoration: none;
+                }
+
+                .hover {
+                    position: relative;
+                    &:before, &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -5%;
+                        width: 0%;
+                        height: 2px;
+                        transition: all 0.2s ease-in-out;
+                        transition-duration: 0.5s;
+                        opacity: 0;
+                        background-color: $accent-color;
+                        left: 0;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    .hover {
+                        &:before, &:after {
+                            width: 100%;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .socials-container {
+        flex-grow: 2;
+        flex-shrink: 2;
+
+        * {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+/*
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    border: 1px solid red;
+
+    .one {
+        border: 1px solid red;
+        flex-grow: 1;
+    }
+    
+    .two {
+        border: 1px solid red;
+        flex-grow: 10;
+    }
+    
+    .three {
+        border: 1px solid red;
+        flex-grow: 1;
+    }
+}
+*/

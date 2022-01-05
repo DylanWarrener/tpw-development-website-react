@@ -1,4 +1,8 @@
+// Default react import
 import React from 'react';
+
+// Style sheet 
+import './home.scss';
 
 export default function HomePage() {
     return (

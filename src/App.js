@@ -6,6 +6,10 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/header/header';
 import HomePage from './pages/home/home';
 import AboutPage from './pages/about/about';
+import LocationPage from './pages/location/location';
+import ExpertisePage from './pages/expertise/expertise';
+import PortfolioPage from './pages/protfolio/protfolio';
+import ContactPage from './pages/contact/contact';
 import Footer from './components/footer/footer';
 
 // Style sheet
@@ -16,6 +20,10 @@ export default function App() {
     <div className="App">
       <Header />
       <Routes>
+        <Route exact path='/contact' element={<ContactPage />} />
+        <Route exact path='/portfolio' element={<PortfolioPage />} />
+        <Route exact path='/expertise' element={<ExpertisePage />} />
+        <Route exact path='/location' element={<LocationPage />} />
         <Route exact path='/about' element={<AboutPage />} />
         <Route exact path='/' element={<HomePage />} />
       </Routes>
