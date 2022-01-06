@@ -8,8 +8,9 @@ $border-color: red;
 #nav-container {
     display: flex;
     flex-grow: 1;
-    background-image: linear-gradient(to bottom right, $accent-color, $accent-color, $secondary-colour);
+    background-color: $secondary-colour;
     border: 1px solid red; 
+    border-bottom: 0.4rem solid $accent-color;
 
     /* Logo (left part of nav bar) */
     #logo-container {
@@ -17,7 +18,6 @@ $border-color: red;
         justify-content: center;
         align-items: center;
         flex-grow: 2;
-        flex-shrink: 2;
         
         border: 1px solid red;
 
@@ -67,14 +67,10 @@ $border-color: red;
                         background-color: $accent-color;
                         left: 0;
                     }
-                    
-                    &:focus {
-                        color: red;
-                    }
                 }
 
                 .active {
-                    color: red;
+                    color: $accent-color;
                 }
 
                 &:hover {
@@ -93,7 +89,6 @@ $border-color: red;
     /* Socials (right part of nav bar) */
     #socials-container {
         flex-grow: 2;
-        flex-shrink: 2;
 
         * {
             width: 100%;
