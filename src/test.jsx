@@ -3,36 +3,22 @@ import React from 'react';
 import NAVIGATION_DATA from './data/navigation';
 
 export default function Test() {
-    const NAV = [
-        "Home", 
-        "About", 
-        "Location", 
-        "Expertise",
-        "Portfolio", 
-        "Contact"
-    ];
-
-    console.log(NAV);
-
-    /*
-    const array = [];
-    for(let i = 0; i < NAV.length; i++) {
-        array.push({ 
+    const NAV_TITLES = ["Home", "About", "Location", "Expertise", "Portfolio", "Contact"];
+    const NAV_DATA = [];
+    
+    for(let i = 0; i < NAV_TITLES.length; i++) {
+        NAV_DATA.push({
             "id": i,
-            "name": NAV[i],
-            "routeName": NAV[i].toLowerCase()
+            "name": NAV_TITLES[i],
+            "routeName": (NAV_TITLES[i] === "Home") ? "/" : NAV_TITLES[i].toLowerCase()
         });
-        if(NAV[i] === "Expertise") {
-            NAV[i].add({
-                "items": []
-            })
-        }
     }
-    */
+
+    console.log(NAV_DATA);
 
     return (
         <div>
-            
+
         </div>
     );
 }
