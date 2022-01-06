@@ -21,7 +21,7 @@ import './App.css';
 export default function App() {
   return (
     <div className="App">
-      <Test />
+      {/* <Test /> */}
       <Header />
       <Routes>
         <Route exact path='/contact' element={<ContactPage />} />
