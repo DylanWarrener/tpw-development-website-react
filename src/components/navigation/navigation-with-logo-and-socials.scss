@@ -1,0 +1,98 @@
+/* Somehow import these colours from somewhere else */
+$base-color: white;
+$secondary-colour: #9e9fa2;
+$accent-color: #b83bb5;
+
+$border-color: red;
+
+#nav-container {
+    display: flex;
+    flex-grow: 1;
+    background-color: $secondary-colour;
+    border: 1px solid red; 
+    border-bottom: 0.4rem solid $accent-color;
+
+    /* Logo (left part of nav bar) */
+    #logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 2;
+        
+        border: 1px solid red;
+
+        #logo {
+            border: 1px solid red;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    /* Navigation (middle part of nav bar) */
+    #nav-links-container {
+        flex-grow: 7;
+        border: 1px solid $border-color;
+
+        display: flex;
+
+        #nav-links {
+            list-style-type: none;
+            flex-grow: 10;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border: 1px solid $border-color;
+
+            li {
+                position: relative;
+                border: 1px solid $border-color;
+                * {
+                    color: white;
+                    text-decoration: none;
+                }
+
+                .hover {
+                    position: relative;
+
+                    &:before, &:after {
+                        content: "";
+                        position: absolute;
+                        bottom: -5%;
+                        width: 0%;
+                        height: 2px;
+                        transition: all 0.2s ease-in-out;
+                        transition-duration: 0.5s;
+                        opacity: 0;
+                        background-color: $accent-color;
+                        left: 0;
+                    }
+                }
+
+                .active {
+                    color: $accent-color;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    .hover {
+                        &:before, &:after {
+                            width: 100%;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Socials (right part of nav bar) */
+    #socials-container {
+        flex-grow: 2;
+
+        * {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
