@@ -16,7 +16,7 @@ import Footer from './components/footer/footer';
 import Test from './test';
 
 // Style sheet
-import './App.css';
+import './App.scss';
 
 export default function App() {
   return (
@@ -24,12 +24,12 @@ export default function App() {
       {/* <Test /> */}
       <Header />
       <Routes>
-        <Route exact path='/contact' element={<ContactPage />} />
-        <Route exact path='/portfolio' element={<PortfolioPage />} />
-        <Route exact path='/expertise' element={<ExpertisePage />} />
-        <Route exact path='/location' element={<LocationPage />} />
-        <Route exact path='/about' element={<AboutPage />} />
-        <Route exact path='/' element={<HomePage />} />
+        <Route path='/contact' element={<ContactPage />} />
+        <Route path='/portfolio' element={<PortfolioPage />} />
+        <Route path='/expertise' element={<ExpertisePage />} />
+        <Route path='/location' element={<LocationPage />} />
+        <Route path='/about' element={<AboutPage />} />
+        <Route path='/' element={<HomePage />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
       <Footer />
