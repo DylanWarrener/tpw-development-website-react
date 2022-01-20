@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Navigation 
-import Navigation from '../navigation/navigation';
+import NavigationWithLogoAndSocials from '../navigation/navigation-with-logo-and-socials';
 
 // Style sheet  
 import './header.scss';
@@ -10,7 +10,7 @@ import './header.scss';
 export default function Header() {
     return (
         <div id='header'>
-            <Navigation />
+            <NavigationWithLogoAndSocials />
         </div>
     );
 }
