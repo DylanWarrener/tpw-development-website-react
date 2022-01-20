@@ -1,4 +1,13 @@
-const NAV_TITLES = ["Home", "About", "Location", "Expertise", "Portfolio", "Contact"];
+const NAV_TITLES = [
+    "Home", 
+    "Kitchens", 
+    "Bathrooms", 
+    "New builds", 
+    "Extensions", 
+    "Refurbishments",
+    "About",
+    "Contact"
+];
 
 const NAV_DATA = [];
 for(let i = 0; i < NAV_TITLES.length; i++) {
