@@ -1,6 +1,6 @@
-import Facebook from './socials/Facebook.svg';
-import Whatsapp from './socials/Whatsapp.svg';
-import Logo from './logo/logo.svg';
+import Facebook from './static/socials/Facebook.svg';
+import Whatsapp from './static/socials/Whatsapp.svg';
+import Logo from './static/logo/logo.svg';
 
 export {
     Facebook,
