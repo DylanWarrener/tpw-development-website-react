@@ -1,0 +1,15 @@
+#contact-container {
+    display: flex;
+    justify-content: center;
+
+    #form-container {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        border: 1px solid red;
+    }
+
+    #contact-information {
+        border: 1px solid red;
+    }
+}
