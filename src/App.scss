@@ -1,0 +1,18 @@
+@use './abstracts/defaults';
+@use './abstracts/font';
+@use './abstracts/colors';
+
+html {
+  font-size: font.$font-size-html;
+}
+
+body {
+  font-size: font.$font-size-body;
+  color: colors.$font-body;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
