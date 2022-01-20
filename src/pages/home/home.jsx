@@ -1,13 +1,17 @@
-// Default react import
-import React from 'react';
+// Default react 
+import React, { Component } from 'react';
 
 // Style sheet 
 import './home.scss';
 
-export default function HomePage() {
-    return (
-        <div className="homepage">
-            Homepage
-        </div>
-    );
+class Home extends Component {
+    render() {
+        return (
+            <div className='home'>
+                Home page 
+            </div>
+        );
+    }
 }
+
+export default Home;
