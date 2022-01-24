@@ -1,21 +1,18 @@
 @use '../../abstracts/colors';
 
 #footer-container {
+    display: flex;
+    flex-direction: column;
+    background: colors.$primary-theme;
     color: colors.$font-footer;
 
+    border: 1px solid orange;
+
     #chevron {
-        background-color: colors.$footer-background;
-        border-top: 10vh solid colors.$body-background;
+        background-color: colors.$background-footer;
+        border-top: 10vh solid colors.$background-body;
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
         position: absolute;
-    }
-    
-    #footer-panel {
-        border: 1px solid orange;
-        display: flex;
-        flex-direction: column;
-        background: black; /* colors.$footer-background */
-        padding: 5px;
     }
 }
