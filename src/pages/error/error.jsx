@@ -1,8 +1,12 @@
+// Default react
 import React from 'react';
 
-export default function Error(props) {
+// Stylesheet 
+import './error.scss';
+
+export default function Error() {
     return (
-        <div>
+        <div id='error-container'>
             Error page
         </div>
     );
