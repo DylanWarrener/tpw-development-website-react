@@ -7,7 +7,7 @@ import './home.scss';
 class Home extends Component {
     render() {
         return (
-            <div className='home'>
+            <div id='home-container'>
                 Home page 
             </div>
         );
