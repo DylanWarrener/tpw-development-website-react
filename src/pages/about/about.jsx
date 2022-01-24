@@ -6,8 +6,8 @@ import './about.scss';
 
 export default function AboutPage() {
     return (
-        <div className="aboutpage">
-            Aboutpage
+        <div className="about-container">
+            About page
         </div>
     );
 }
