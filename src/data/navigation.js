@@ -1,21 +1,21 @@
 const NAV_TITLES = [
-    "Home", 
-    "Kitchens", 
-    "Bathrooms", 
-    "New builds", 
-    "Extensions", 
-    "Refurbishments",
-    "About",
-    "Contact"
+    "home", 
+    "kitchens", 
+    "bathrooms", 
+    "newbuilds", 
+    "extensions", 
+    "refurbishments",
+    "about",
+    "contact"
 ];
 
-const NAV_DATA = [];
-for(let i = 0; i < NAV_TITLES.length; i++) {
-    NAV_DATA.push({
-        "id": i,
-        "name": NAV_TITLES[i],
-        "routeName": (NAV_TITLES[i] === "Home") ? "/" : NAV_TITLES[i].toLowerCase()
-    });
-}
+const NAVIGATIONAL_DATA = {}
+NAV_TITLES.forEach((title, index, arr) => {
+    NAVIGATIONAL_DATA[title] = {
+        "id": index,
+        "title": title.toUpperCase(),
+        "routeName": (title === "home") ? "/" : title.toLowerCase()
+    }
+});
 
-export default NAV_DATA;
+export default NAVIGATIONAL_DATA;
