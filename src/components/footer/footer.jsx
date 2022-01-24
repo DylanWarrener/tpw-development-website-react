@@ -12,10 +12,8 @@ export default function Footer() {
     return (
         <div id="footer-container">
             {/* <i id='chevron' /> */}
-            <div id='footer-panel'>
-                <ContactWithBusinessInformation />
-                <SocialMediaLinks />
-            </div>
+            <ContactWithBusinessInformation />
+            <SocialMediaLinks />
         </div>
     );
 }
