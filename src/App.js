@@ -1,19 +1,26 @@
-// React default imports
+// React default 
 import React from 'react';
+
 import { Routes, Route } from 'react-router-dom';
 
-// Page imports
+// Pages
 import Header from './components/header/header';
 import ErrorPage from './pages/error/error';
 import HomePage from './pages/home/home';
+import KitchenPage from './pages/kitchen/kitchen';
+import BathroomPage from './pages/bathroom/bathroom';
+import NewBuildPage from './pages/new-builds/new-builds';
+import ExtensionPage from './pages/home-extension/home-extension';
+import RefurbishmentPage from './pages/refurbishment/refurbishment';
 import AboutPage from './pages/about/about';
-import LocationPage from './pages/location/location';
-import ExpertisePage from './pages/expertise/expertise';
-import PortfolioPage from './pages/portfolio/portfolio';
 import ContactPage from './pages/contact/contact';
 import Footer from './components/footer/footer';
 
+// Test page
 import Test from './test';
+
+// Navigational data 
+import NAV_DATA from './data/navigation';
 
 // Style sheet
 import './App.scss';
@@ -24,13 +31,15 @@ export default function App() {
       {/* <Test /> */}
       <Header />
       <Routes>
-        <Route path='/contact' element={<ContactPage />} />
-        <Route path='/portfolio' element={<PortfolioPage />} />
-        <Route path='/expertise' element={<ExpertisePage />} />
-        <Route path='/location' element={<LocationPage />} />
-        <Route path='/about' element={<AboutPage />} />
-        <Route path='/' element={<HomePage />} />
         <Route path='*' element={<ErrorPage />} />
+        <Route path='/' element={<HomePage />} />
+        <Route path='kitchens' element={<KitchenPage />} />
+        <Route path='bathrooms' element={<BathroomPage />} />
+        <Route path='newbuilds' element={<NewBuildPage />} />
+        <Route path='extensions' element={<ExtensionPage />} />
+        <Route path='refurbishments' element={<RefurbishmentPage />} />
+        <Route path='about' element={<AboutPage />} />
+        <Route path='contact' element={<ContactPage />} />
       </Routes>
       <Footer />
     </div>
