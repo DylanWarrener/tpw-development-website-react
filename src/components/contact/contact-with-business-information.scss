@@ -1,15 +1,50 @@
-#contact-container {
-    display: flex;
-    justify-content: center;
+@use '../../abstracts/colors';
 
-    #form-container {
-        display: flex;
-        flex-direction: column;
-        width: 25%;
-        border: 1px solid red;
+#contact-container {
+    border: 1px solid green;
+
+    #title {
+        position: relative;
+        text-align: center;
+
+        border: 1px solid orange;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            transition: all 0.2s ease-in-out;
+            transition-duration: 0.5s;
+            opacity: 1;
+            background-color: red;
+            left: 0;
+        }
     }
 
-    #contact-information {
-        border: 1px solid red;
+    #subtitle {
+        text-align: center;
+        color: colors.$secondary-theme;
+    }
+
+    #contact-elements {
+        display: flex;
+        justify-content: center;
+        border: 1px solid orange;
+
+        #form-container {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+        }
+    
+        #contact-information {
+            margin-left: 2%;
+            padding: 2%;
+            border-left: 3px solid;
+            border-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(114,21,174,1) 50%, rgba(0,0,0,1) 100%);
+            border-image-slice: 1;
+        }
     }
 }
