@@ -1,10 +1,13 @@
+// Default react
 import React from 'react';
 
-export default function Contact(props) {
-    console.log(props);
+// Stylesheet
+import './contact.scss';
+
+export default function Contact() {
     return (
-        <div>
-            Contact
+        <div id='contact-container'>
+            Contact page
         </div>
     );
 }
