@@ -1,16 +1,10 @@
-/* Somehow import these colours from somewhere else */
-$base-color: white;
-$secondary-colour: #9e9fa2;
-$accent-color: #b83bb5;
-
-$border-color: red;
+@use '../../abstracts/colors';
 
 #nav-container {
     display: flex;
     flex-grow: 1;
-    background-color: $secondary-colour;
-    border: 1px solid red; 
-    border-bottom: 0.4rem solid $accent-color;
+    background-color: colors.$primary-theme;
+    border-bottom: 0.4rem solid colors.$accent-theme;
 
     /* Logo (left part of nav bar) */
     #logo-container {
@@ -31,7 +25,7 @@ $border-color: red;
     /* Navigation (middle part of nav bar) */
     #nav-links-container {
         flex-grow: 7;
-        border: 1px solid $border-color;
+        border: 1px solid red;
 
         display: flex;
 
@@ -42,11 +36,10 @@ $border-color: red;
             display: flex;
             align-items: center;
             justify-content: space-around;
-            border: 1px solid $border-color;
 
             li {
                 position: relative;
-                border: 1px solid $border-color;
+
                 * {
                     color: white;
                     text-decoration: none;
@@ -55,7 +48,7 @@ $border-color: red;
                 .hover {
                     position: relative;
 
-                    &:before, &:after {
+                    &::before, &::after {
                         content: "";
                         position: absolute;
                         bottom: -5%;
@@ -64,13 +57,13 @@ $border-color: red;
                         transition: all 0.2s ease-in-out;
                         transition-duration: 0.5s;
                         opacity: 0;
-                        background-color: $accent-color;
+                        background-color: colors.$accent-theme;
                         left: 0;
                     }
                 }
 
                 .active {
-                    color: $accent-color;
+                    color: colors.$accent-theme;
                 }
 
                 &:hover {
