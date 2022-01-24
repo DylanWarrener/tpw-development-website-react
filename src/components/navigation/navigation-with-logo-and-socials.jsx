@@ -12,7 +12,7 @@ import {
 } from '../../assets/assets';
 
 // Navagational data
-import NAVIGATION_DATA from '../../data/navigation';
+import NAV_DATA from '../../data/navigation';
 
 // Stylesheet 
 import './navigation-with-logo-and-socials.scss';
@@ -26,15 +26,15 @@ export default function Navigation() {
             <div id='nav-links-container'>
                 <ul id='nav-links'>
                     {   
-                        NAVIGATION_DATA.map(({ id, routeName, name }) => (
-                            <li key={id}>
+                        Object.keys(NAV_DATA).map((key, index) => (
+                            <li key={NAV_DATA[key].id}>
                                 <NavLink 
-                                    to={routeName}
+                                    to={NAV_DATA[key].routeName}
                                     className={navLink =>
                                         "hover" + (navLink.isActive ? " active" : "")
                                     }
                                 >
-                                    {name.toUpperCase()}
+                                    {NAV_DATA[key].title}
                                 </NavLink>
                             </li>
                         ))
