@@ -1,6 +1,10 @@
-/* Entire header */
+@use '../../abstracts/colors';
+
 #header-container {
     display: flex;
-    min-height: 10vh;
-    max-height: 15vh;
+    height: 8vh;
+    min-height: 6vh;
+    max-height: 10vh;
+    color: colors.$font-header;
+    background-color: colors.$background-header;
 }
