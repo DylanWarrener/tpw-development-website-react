@@ -1,18 +1,30 @@
-@use './abstracts/defaults';
-@use './abstracts/font';
+@use './abstracts/fonts';
 @use './abstracts/colors';
 
+* {
+  font-family: fonts.$family;
+}
+
 html {
-  font-size: font.$font-size-html;
+  font-size: fonts.$html;
+}
+
+textarea {
+  padding: 8px 3px;
 }
 
 body {
-  font-size: font.$font-size-body;
+  font-size: fonts.$size-normal;
   color: colors.$font-body;
+  background-color: colors.$background-body;
   margin: 0;
 }
 
 ul {
   margin: 0;
   padding: 0;
+}
+
+p {
+  margin: 0;
 }
