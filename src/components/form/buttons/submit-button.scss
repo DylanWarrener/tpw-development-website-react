@@ -1,3 +1,6 @@
+@use '../../../abstracts/colors.scss';
+@use '../../../abstracts/fonts.scss';
+
 .button {
     width: 25%;
     min-width: 25%;
@@ -5,6 +8,16 @@
     height: 50px;
     min-height: 50px;
     max-height: 50px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: colors.$font-footer;
+    font-size: fonts.$size-normal;
 
-    border: 1px solid red;
+    &:hover {
+        cursor: pointer;
+        border: none;
+        background-color: colors.$accent-theme;
+        transition: all 0.2 ease-in-out;
+        transition-duration: 1s;
+    }
 }
