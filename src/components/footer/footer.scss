@@ -3,16 +3,14 @@
 #footer-container {
     display: flex;
     flex-direction: column;
-    background: colors.$primary-theme;
+    background: colors.$background-footer;
     color: colors.$font-footer;
-
-    border: 1px solid orange;
 
     #chevron {
         background-color: colors.$background-footer;
         border-top: 10vh solid colors.$background-body;
         border-left: 50vw solid transparent;
         border-right: 50vw solid transparent;
-        position: absolute;
+        position: relative;
     }
 }
