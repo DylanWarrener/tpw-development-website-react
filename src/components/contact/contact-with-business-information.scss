@@ -1,34 +1,55 @@
 @use '../../abstracts/colors';
+@use '../../abstracts/fonts';
+@use '../../abstracts/others';
 
 #contact-container {
-    border: 1px solid green;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: others.$content-padding;
 
     #title {
+        font-size: fonts.$size-heading;
+        color: colors.$font-header;
+        text-decoration: none;
         position: relative;
         text-align: center;
-
-        border: 1px solid orange;
+        border-bottom: others.$border-size solid white;
+        width: auto;
 
         &::after {
             content: '';
+            background-color: colors.$accent-theme;
+            display: block;
             position: absolute;
-            bottom: 0;
             width: 0;
-            height: 2px;
+            height: others.$border-size;
+            left: 50%;
+            bottom: 10;
             transition: all 0.2s ease-in-out;
-            transition-duration: 0.5s;
+            transition-duration: 0.3s;
             opacity: 1;
-            background-color: red;
-            left: 0;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            &::after {
+                width: 100%;
+                left: 0;
+            }
         }
     }
 
     #subtitle {
+        width: auto;
+        font-style: italic;
         text-align: center;
-        color: colors.$secondary-theme;
+        color: colors.$accent-theme;
     }
 
     #contact-elements {
+        width: 100%;
         display: flex;
         justify-content: center;
         border: 1px solid orange;
@@ -38,13 +59,32 @@
             flex-direction: column;
             width: 30%;
         }
-    
-        #contact-information {
-            margin-left: 2%;
-            padding: 2%;
-            border-left: 3px solid;
-            border-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(114,21,174,1) 50%, rgba(0,0,0,1) 100%);
-            border-image-slice: 1;
+    }
+
+    /* The contact information container (next to contact form) */
+    #contact-information {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 2%;
+        padding: 2%;
+        border-left: 3px solid;
+        border-image: linear-gradient(180deg, colors.$primary-theme, colors.$accent-theme, colors.$primary-theme 100%);
+        border-image-slice: 1;
+        border: 1px solid red;
+
+        .container {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            border: 1px solid red;
+
+            .contact-svg {
+                width: 8%;
+                height: 100%;
+                margin-right: 10px;
+                border: 1px solid red;
+            }
         }
     }
 }
