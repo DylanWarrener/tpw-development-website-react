@@ -4,14 +4,15 @@ import React from 'react';
 // Stylesheet
 import './input.scss';
 
-export default function CustomFormInput(props) {
+export default function CustomFormInput({ placeholder, name, type, pattern}) {
     return (
-        <input className='input'
-            name={props.name}
-            type={props.type}
-            handleChange={props.handleChange}
-            pattern={props.pattern}
+        <input 
+            className='input'
+            placeholder={placeholder}
+            name={name}
+            type={type}
+            pattern={pattern}
             required
-        ></input>
+        />
     );
 }

@@ -4,10 +4,12 @@ import React from 'react';
 // Stylesheet
 import './textarea.scss';
 
-export default function CustomTextarea(props) {
+export default function CustomTextarea({ placeholder, name }) {
     return (
-        <textarea>
-            This is the textarea message
-        </textarea>
+        <textarea 
+            className='text-area'
+            placeholder={placeholder}
+            name={name}
+        />
     );
 }

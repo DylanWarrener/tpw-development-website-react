@@ -1,0 +1,60 @@
+@use '../../abstracts/colors';
+@use '../../abstracts/fonts';
+@use '../../abstracts/others';
+
+#socials-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: others.$content-padding;
+    
+    #socials-link {
+        width: auto;
+
+        display: flex;
+        justify-content: space-around;
+
+        .socials {
+            width: 64px;
+            height: 64px;
+            display: block;
+            margin: 10px;
+            background-color: colors.$primary-theme;
+
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+
+            &:hover {
+                background-color: white;
+                transition: all 0.2s ease-in-out;
+                transition-duration: 0.3s;
+            }
+
+            &.facebook {
+                background-image: url('../../assets/static/socials/Facebook.svg');
+            }
+
+            &.whatsapp {
+                background-image: url('../../assets/static/socials/Whatsapp.svg');
+            }
+        }
+
+        .socials-footer-svg {
+            width: 100%;
+            height: 100%;
+            background-color: green;
+            border: 1px solid red;
+        }
+    }
+
+    #copyright-text {
+        width: auto;
+        padding: 3vh 0;
+        font-size: fonts.$size-emphasize-capital;
+
+        #copyright-icon {
+            color: colors.$accent-theme;
+        }
+    }
+}

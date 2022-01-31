@@ -1,23 +1,22 @@
 import React from 'react';
+
+// React router
 import { NavLink } from 'react-router-dom';
 
-// Social media component
-import SocialMedia from '../social-media/social-media';
-
 // Logo and social media SVG 
-import { 
+import {
+    Logo, 
     Facebook, 
-    Whatsapp, 
-    Logo 
+    Whatsapp
 } from '../../assets/assets';
 
-// Navagational data
+// Navigation data
 import NAV_DATA from '../../data/navigation';
 
 // Stylesheet 
 import './navigation-with-logo-and-socials.scss';
 
-export default function Navigation() {
+const Navigation = () => {
     return (
         <div id='nav-container'>
             <NavLink id='logo-container' to='/'>
@@ -31,7 +30,7 @@ export default function Navigation() {
                                 <NavLink 
                                     to={NAV_DATA[key].routeName}
                                     className={navLink =>
-                                        "hover" + (navLink.isActive ? " active" : "")
+                                        "link" + (navLink.isActive ? " active" : "")
                                     }
                                 >
                                     {NAV_DATA[key].title}
@@ -41,9 +40,12 @@ export default function Navigation() {
                     }
                 </ul>
             </div>
-            <div id='socials-container'>
-                <SocialMedia />
+            <div id='nav-socials-container'>
+                <img src={Facebook} alt='facebook'/>
+                <img src={Whatsapp} alt='whatsapp'/>
             </div>
         </div>
     );
 }
+
+export default Navigation;

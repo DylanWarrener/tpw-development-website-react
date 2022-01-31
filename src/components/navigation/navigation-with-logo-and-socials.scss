@@ -1,22 +1,22 @@
 @use '../../abstracts/colors';
+@use '../../abstracts/others';
 
 #nav-container {
-    display: flex;
     flex-grow: 1;
-    background-color: colors.$primary-theme;
+
+    display: flex;
     border-bottom: 0.4rem solid colors.$accent-theme;
 
     /* Logo (left part of nav bar) */
     #logo-container {
+        flex-grow: 2;
+        
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-grow: 2;
-        
-        border: 1px solid red;
+        text-decoration: none;
 
         #logo {
-            border: 1px solid red;
             width: 100%;
             height: 100%;
         }
@@ -25,7 +25,6 @@
     /* Navigation (middle part of nav bar) */
     #nav-links-container {
         flex-grow: 7;
-        border: 1px solid red;
 
         display: flex;
 
@@ -41,24 +40,25 @@
                 position: relative;
 
                 * {
-                    color: white;
+                    color: colors.$font-header;
                     text-decoration: none;
                 }
 
-                .hover {
+                .link {
                     position: relative;
 
-                    &::before, &::after {
-                        content: "";
+                    &::after {
+                        content: '';
+                        background-color: colors.$accent-theme;
+                        display: block;
                         position: absolute;
-                        bottom: -5%;
-                        width: 0%;
-                        height: 2px;
+                        width: 0;
+                        height: others.$border-size;
+                        left: 50%;
+                        bottom: 10;
                         transition: all 0.2s ease-in-out;
                         transition-duration: 0.5s;
                         opacity: 0;
-                        background-color: colors.$accent-theme;
-                        left: 0;
                     }
                 }
 
@@ -68,10 +68,12 @@
 
                 &:hover {
                     cursor: pointer;
-                    .hover {
-                        &:before, &:after {
+
+                    .link {
+                        &:after {
                             width: 100%;
                             opacity: 1;
+                            left: 0;
                         }
                     }
                 }
@@ -80,8 +82,10 @@
     }
 
     /* Socials (right part of nav bar) */
-    #socials-container {
+    #nav-socials-container {
         flex-grow: 2;
+        
+        border: 1px solid red;
 
         * {
             width: 100%;

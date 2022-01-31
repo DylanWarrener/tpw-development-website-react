@@ -3,7 +3,7 @@ import React from 'react';
 
 // Components
 import ContactWithBusinessInformation from '../contact/contact-with-business-information';
-import SocialMediaLinks from '../social-media/social-media';
+import SocialsFooter from '../social-media/socials-footer';
 
 // Style sheet 
 import './footer.scss';
@@ -11,9 +11,9 @@ import './footer.scss';
 export default function Footer() {
     return (
         <div id="footer-container">
-            {/* <i id='chevron' /> */}
+            <i id='chevron' />
             <ContactWithBusinessInformation />
-            <SocialMediaLinks />
+            <SocialsFooter />
         </div>
     );
 }
