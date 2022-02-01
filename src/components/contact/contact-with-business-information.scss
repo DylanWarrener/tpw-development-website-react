@@ -1,12 +1,12 @@
 @use '../../abstracts/colors';
 @use '../../abstracts/fonts';
-@use '../../abstracts/others';
+@use '../../abstracts/defaults';
 
 #contact-container {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    padding: others.$content-padding;
+    padding: defaults.$padding-content;
 
     #title {
         font-size: fonts.$size-heading;
@@ -14,7 +14,7 @@
         text-decoration: none;
         position: relative;
         text-align: center;
-        border-bottom: others.$border-size solid white;
+        border-bottom: defaults.$border-height solid white;
         width: auto;
 
         &::after {
@@ -23,7 +23,7 @@
             display: block;
             position: absolute;
             width: 0;
-            height: others.$border-size;
+            height: defaults.$border-height;
             left: 50%;
             bottom: 10;
             transition: all 0.2s ease-in-out;
@@ -52,7 +52,6 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        border: 1px solid orange;
 
         #form-container {
             display: flex;
