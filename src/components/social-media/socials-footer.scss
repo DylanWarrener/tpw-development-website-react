@@ -1,12 +1,12 @@
 @use '../../abstracts/colors';
 @use '../../abstracts/fonts';
-@use '../../abstracts/others';
+@use '../../abstracts/defaults';
 
 #socials-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: others.$content-padding;
+    padding: defaults.$padding-content;
     
     #socials-link {
         width: auto;
@@ -38,13 +38,6 @@
             &.whatsapp {
                 background-image: url('../../assets/static/socials/Whatsapp.svg');
             }
-        }
-
-        .socials-footer-svg {
-            width: 100%;
-            height: 100%;
-            background-color: green;
-            border: 1px solid red;
         }
     }
 
