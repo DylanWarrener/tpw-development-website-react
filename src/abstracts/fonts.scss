@@ -1,8 +1,9 @@
+// To make rem sizing easier e.g. (2rem = 20px)
 $html: 62.5%;
 
+// Font family and sizing
 $family: Arial, Helvetica, sans-serif;
 $size-heading: 3.2rem;
-$size-sub-heading: $family 1.8rem italic;
-$style-sub-heading: italic;
+$size-sub-heading: 1.8rem;
 $size-normal: 1.6rem;
 $size-emphasize-capital: 1.4rem;
