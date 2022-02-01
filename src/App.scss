@@ -18,14 +18,12 @@ body {
   font-size: fonts.$size-normal;
   color: colors.$font-body;
   background-color: colors.$background-body;
-  margin: 0;
 }
 
 ul {
-  margin: 0;
   padding: 0;
 }
 
-p {
-  margin: 0;
+body, ul, p  {
+  margin: 0
 }
