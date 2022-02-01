@@ -4,10 +4,12 @@ import React from 'react';
 // Stylesheet
 import './new-builds.scss';
 
-export default function NewBuildsPage() {
+const NewBuildsPage = () => {
     return (
         <div id='newbuild-container'>
             New builds page
         </div>
     );
 }
+
+export default NewBuildsPage;

@@ -4,10 +4,12 @@ import React from 'react';
 // Stylesheet
 import './submit-button.scss';
 
-export default function CustomSubmitButton(props) {
+const CustomSubmitButton = (props, { type }) => {
     return (
-        <button className='button' type={props.type}>
+        <button className='button' type={type}>
             {props.children}
         </button>
     );
 }
+
+export default CustomSubmitButton;

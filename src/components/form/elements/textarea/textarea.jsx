@@ -4,7 +4,7 @@ import React from 'react';
 // Stylesheet
 import './textarea.scss';
 
-export default function CustomTextarea({ placeholder, name }) {
+const CustomTextarea = ({ placeholder, name }) => {
     return (
         <textarea 
             className='text-area'
@@ -13,3 +13,5 @@ export default function CustomTextarea({ placeholder, name }) {
         />
     );
 }
+
+export default CustomTextarea;

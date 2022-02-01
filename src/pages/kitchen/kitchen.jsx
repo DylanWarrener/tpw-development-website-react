@@ -4,10 +4,12 @@ import React from 'react';
 // Stylesheet
 import './kitchen.scss';
 
-export default function KitchenPage() {
+const KitchenPage = () => {
     return (
         <div id='kitchen-container'>
             Kitchen page
         </div>
     );
 }
+
+export default KitchenPage;

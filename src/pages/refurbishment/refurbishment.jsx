@@ -4,10 +4,12 @@ import React from 'react';
 // Stylesheet
 import './refurbishment.scss';
 
-export default function RefurbishmentPage() {
+const RefurbishmentPage = () => {
     return (
         <div id='refurbishment-container'>
             Refurbishment page
         </div>
     );
 }
+
+export default RefurbishmentPage;

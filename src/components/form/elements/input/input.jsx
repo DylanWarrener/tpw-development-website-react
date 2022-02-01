@@ -4,7 +4,7 @@ import React from 'react';
 // Stylesheet
 import './input.scss';
 
-export default function CustomFormInput({ placeholder, name, type, pattern}) {
+const CustomFormInput = ({ placeholder, name, type, pattern}) => {
     return (
         <input 
             className='input'
@@ -16,3 +16,5 @@ export default function CustomFormInput({ placeholder, name, type, pattern}) {
         />
     );
 }
+
+export default CustomFormInput;

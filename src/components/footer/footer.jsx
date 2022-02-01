@@ -8,7 +8,7 @@ import SocialsFooter from '../social-media/socials-footer';
 // Style sheet 
 import './footer.scss';
 
-export default function Footer() {
+const Footer = () => {
     return (
         <div id="footer-container">
             <i id='chevron' />
@@ -17,3 +17,5 @@ export default function Footer() {
         </div>
     );
 }
+
+export default Footer;

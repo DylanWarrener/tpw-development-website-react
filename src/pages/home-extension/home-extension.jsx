@@ -4,10 +4,12 @@ import React from 'react';
 // Stylesheet
 import './home-extension.scss';
 
-export default function ExtensionPage() {
+const ExtensionPage = () => {
     return (
         <div>
             Home extension page
         </div>
     );
 }
+
+export default ExtensionPage;

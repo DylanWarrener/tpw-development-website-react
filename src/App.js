@@ -1,6 +1,6 @@
-// React default 
 import React from 'react';
 
+// React router
 import { Routes, Route } from 'react-router-dom';
 
 // Pages
@@ -19,13 +19,10 @@ import Footer from './components/footer/footer';
 // Test page
 import Test from './test';
 
-// Navigational data 
-import NAV_DATA from './data/navigation';
-
 // Style sheet
 import './App.scss';
 
-export default function App() {
+const App = () => {
   return (
     <div className="App">
       {/* <Test /> */}
@@ -45,3 +42,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;
