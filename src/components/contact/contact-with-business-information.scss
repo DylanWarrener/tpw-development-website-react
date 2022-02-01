@@ -7,8 +7,10 @@
     flex-flow: column nowrap;
     align-items: center;
     padding: defaults.$padding-content;
+    border: none;
+    background-color: colors.$primary-theme;
 
-    #title {
+    .title {
         font-size: fonts.$size-heading;
         color: colors.$font-header;
         text-decoration: none;
@@ -41,11 +43,12 @@
         }
     }
 
-    #subtitle {
+    .subtitle {
         width: auto;
         font-style: italic;
         text-align: center;
         color: colors.$accent-theme;
+        padding: defaults.$padding-content / 2;
     }
 
     #contact-elements {
@@ -70,19 +73,16 @@
         border-left: 3px solid;
         border-image: linear-gradient(180deg, colors.$primary-theme, colors.$accent-theme, colors.$primary-theme 100%);
         border-image-slice: 1;
-        border: 1px solid red;
 
         .container {
             display: flex;
             flex-flow: row nowrap;
             align-items: center;
-            border: 1px solid red;
 
             .contact-svg {
                 width: 8%;
                 height: 100%;
                 margin-right: 10px;
-                border: 1px solid red;
             }
         }
     }

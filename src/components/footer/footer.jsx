@@ -3,7 +3,7 @@ import React from 'react';
 
 // Components
 import ContactWithBusinessInformation from '../contact/contact-with-business-information';
-import SocialsFooter from '../social-media/socials-footer';
+import SocialsFooter from '../social-media/footer/socials-footer';
 
 // Style sheet 
 import './footer.scss';
@@ -11,7 +11,6 @@ import './footer.scss';
 const Footer = () => {
     return (
         <div id="footer-container">
-            <i id='chevron' />
             <ContactWithBusinessInformation />
             <SocialsFooter />
         </div>

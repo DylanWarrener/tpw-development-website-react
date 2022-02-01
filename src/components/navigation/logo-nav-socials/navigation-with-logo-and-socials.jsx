@@ -8,10 +8,10 @@ import {
     Logo, 
     Facebook, 
     Whatsapp
-} from '../../assets/assets';
+} from '../../../assets/assets';
 
 // Navigation data
-import NAV_DATA from '../../data/navigation';
+import NAV_DATA from '../../../data/navigation';
 
 // Stylesheet 
 import './navigation-with-logo-and-socials.scss';
@@ -40,10 +40,10 @@ const Navigation = () => {
                     }
                 </ul>
             </div>
-            <div id='nav-socials-container'>
-                <img src={Facebook} alt='facebook'/>
-                <img src={Whatsapp} alt='whatsapp'/>
-            </div>
+            {/* <div id='nav-socials-container'>
+                <img className='socials' src={Facebook} alt='facebook'/>
+                <img className='socials' src={Whatsapp} alt='whatsapp'/>
+            </div> */}
         </div>
     );
 }

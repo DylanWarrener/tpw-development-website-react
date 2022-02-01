@@ -1,3 +1,66 @@
+@use '../../abstracts/colors';
+@use '../../abstracts/fonts';
+@use '../../abstracts/defaults';
+
 #home-container {
-    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../assets/static/background_temp.jpg');
+    background-position: center;
+    background-size: 100%;
+    height: 100vh;
+    align-items: flex-end;
+
+    #content-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        #content {
+            padding: defaults.$padding-content;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            background-color: rgba(60, 53, 78, colors.$all-opacity);
+            border-radius: 0 100px 0 100px;
+
+            #title {
+                font-size: fonts.$size-home-heading;
+                margin-bottom: defaults.$padding-content / 2;
+
+                #highlight {
+                    color: colors.$accent-theme;
+                    font-style: italic;
+                }
+            }
+
+            #bottom {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                #subtitle {
+                    margin-right: 5vw;
+                }
+            }
+        }
+    }
+
+    #chevron-container {
+        display: flex;
+        height: 12vh;
+        overflow: hidden;
+        position: relative;
+        bottom: 0;
+
+        #chevron {
+            background-color: transparent;
+            border-top: 10vh solid transparent;
+            border-left: 50vw solid colors.$primary-theme;
+            border-right: 50vw solid colors.$primary-theme;
+        }
+    }
 }

@@ -4,6 +4,7 @@
 
 * {
   font-family: fonts.$family;
+  font-weight: normal;
 }
 
 html {
@@ -12,6 +13,14 @@ html {
 
 textarea {
   padding: defaults.$padding-textarea;
+}
+
+h1 {
+  font-size: fonts.$size-heading;
+}
+
+h3 {
+  font-size: fonts.$size-sub-heading;
 }
 
 body {
@@ -24,6 +33,6 @@ ul {
   padding: 0;
 }
 
-body, ul, p  {
+body, ul, p, h1, h3  {
   margin: 0
 }

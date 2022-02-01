@@ -24,8 +24,8 @@ class ContactFooterWithBusinessInformation extends Component {
     render() {
         return (
             <div id='contact-container'>
-                <Link id='title' to='contact'>CONTACT</Link>
-                <h3 id='subtitle'>Have a question or want to build a new home today?</h3>
+                <Link className='title' to='contact'>CONTACT</Link>
+                <h3 className='subtitle'>Have a question or want to build a new home today?</h3>
                 <div id='contact-elements'>
                     <form id='form-container'>
                         <CustomFormInput 

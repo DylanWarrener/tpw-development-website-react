@@ -1,12 +1,13 @@
-@use '../../abstracts/colors';
-@use '../../abstracts/fonts';
-@use '../../abstracts/defaults';
+@use '../../../abstracts/colors.scss';
+@use '../../../abstracts/fonts';
+@use '../../../abstracts/defaults';
 
 #socials-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: defaults.$padding-content;
+    background-color: colors.$secondary-theme;
     
     #socials-link {
         width: auto;
@@ -32,11 +33,11 @@
             }
 
             &.facebook {
-                background-image: url('../../assets/static/socials/Facebook.svg');
+                background-image: url('../../../assets/static/socials/Facebook.svg');
             }
 
             &.whatsapp {
-                background-image: url('../../assets/static/socials/Whatsapp.svg');
+                background-image: url('../../../assets/static/socials/Whatsapp.svg');
             }
         }
     }

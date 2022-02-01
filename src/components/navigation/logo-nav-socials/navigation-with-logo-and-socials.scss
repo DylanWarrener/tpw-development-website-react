@@ -1,5 +1,5 @@
-@use '../../abstracts/colors';
-@use '../../abstracts/defaults';
+@use '../../../abstracts/colors';
+@use '../../../abstracts/defaults';
 
 #nav-container {
     flex-grow: 1;
@@ -38,13 +38,24 @@
 
             li {
                 position: relative;
+                padding: 0.5vw;
+                -webkit-transition: background-color 0.5s ease-out;
+                -moz-transition: background-color 0.5s ease-out;
+                -o-transition: background-color 0.5s ease-out;
+                transition: background-color 0.5s ease-out;
+                border-radius: 0 25px 0 25px;
+                
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgba(204, 22, 204, 0.8);
+                }
 
                 * {
                     color: colors.$font-header;
                     text-decoration: none;
                 }
 
-                .link {
+                &.link {
                     position: relative;
 
                     &::after {
@@ -53,7 +64,7 @@
                         display: block;
                         position: absolute;
                         width: 0;
-                        height: defaults.$border-height;
+                        height: defaults.$border-height / 2;
                         left: 50%;
                         bottom: 10;
                         transition: all 0.2s ease-in-out;
@@ -61,21 +72,17 @@
                         opacity: 0;
                     }
                 }
+            }
 
-                .active {
-                    color: colors.$accent-theme;
+            .active {
+                li {
+                    background-color: rgba(204, 22, 204, 0.8);
                 }
 
-                &:hover {
-                    cursor: pointer;
-
-                    .link {
-                        &:after {
-                            width: 100%;
-                            opacity: 1;
-                            left: 0;
-                        }
-                    }
+                &::after {
+                    width: 100%;
+                    opacity: 1;
+                    left: 0;
                 }
             }
         }
@@ -85,11 +92,18 @@
     #nav-socials-container {
         flex-grow: 2;
         
-        border: 1px solid red;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        .socials {
+            width: defaults.$width - 32px;
+            height: defaults.$height - 32px;
 
-        * {
-            width: 100%;
-            height: 100%;
+            &:hover {
+                cursor: pointer;
+                background-color: colors.$navbar-socials;
+            }
         }
     }
 }

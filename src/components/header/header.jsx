@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Custom navigation 
-import NavigationWithLogoAndSocials from '../navigation/navigation-with-logo-and-socials';
+import NavigationWithLogoAndSocials from '../navigation/logo-nav-socials/navigation-with-logo-and-socials';
 
 // Style sheet  
 import './header.scss';

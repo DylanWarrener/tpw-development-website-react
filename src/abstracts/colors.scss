@@ -1,7 +1,13 @@
-// Main themes
+// Main colors for theme
 $primary-theme: #3c354e; 
-$secondary-theme: #736f90; 
-$accent-theme: #b805ff; 
+$primary-theme-rgba: rgba(60, 53, 78, 100);
+$secondary-theme: #8E898D; 
+$secondary-theme-rgba: rgba(142, 137, 141, 100);
+$accent-theme: #CC16CC ; //#CC16CC #7F017F
+$accent-theme-rgba: rgba(204, 22, 204, 100);
+
+// Opacity 
+$all-opacity: 0.8;
 
 // Font colors for main areas
 $font-header: white;
@@ -12,3 +18,7 @@ $font-footer: white;
 $background-header: #3c354e;
 $background-body: white;
 $background-footer: #3c354e;
+
+// Navigation colors
+$navbar-background: rgba(60, 53, 78, $all-opacity);
+$navbar-socials: white;
