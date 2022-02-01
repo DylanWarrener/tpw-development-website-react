@@ -1,5 +1,6 @@
 @use './abstracts/fonts';
 @use './abstracts/colors';
+@use './abstracts/defaults';
 
 * {
   font-family: fonts.$family;
@@ -10,7 +11,7 @@ html {
 }
 
 textarea {
-  padding: 8px 3px;
+  padding: defaults.$padding-textarea;
 }
 
 body {
