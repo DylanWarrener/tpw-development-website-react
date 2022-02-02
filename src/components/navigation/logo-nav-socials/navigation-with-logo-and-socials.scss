@@ -44,6 +44,7 @@
                 -o-transition: background-color 0.5s ease-out;
                 transition: background-color 0.5s ease-out;
                 border-radius: 0 25px 0 25px;
+                border: 1px solid red;
                 
                 &:hover {
                     cursor: pointer;
@@ -72,10 +73,22 @@
                         opacity: 0;
                     }
                 }
+
+                .active {
+                    border-radius: 0 25px 0 25px;
+                    border: 1px solid orange;
+
+                    &::after {
+                        width: 100%;
+                        opacity: 1;
+                        left: 0;
+                    }
+                }
             }
 
             .active {
                 li {
+                    color: red;
                     background-color: rgba(204, 22, 204, 0.8);
                 }
 
