@@ -1,3 +1,4 @@
+@use "sass:math";
 @use '../../../abstracts/colors';
 @use '../../../abstracts/defaults';
 
@@ -29,74 +30,56 @@
         display: flex;
 
         #nav-links {
-            list-style-type: none;
             flex-grow: 10;
 
             display: flex;
+            list-style-type: none;
             align-items: center;
             justify-content: space-around;
 
             li {
-                position: relative;
-                padding: 0.5vw;
-                -webkit-transition: background-color 0.5s ease-out;
-                -moz-transition: background-color 0.5s ease-out;
-                -o-transition: background-color 0.5s ease-out;
-                transition: background-color 0.5s ease-out;
-                border-radius: 0 25px 0 25px;
-                border: 1px solid red;
-                
-                &:hover {
-                    cursor: pointer;
-                    background-color: rgba(204, 22, 204, 0.8);
-                }
-
                 * {
                     color: colors.$font-header;
                     text-decoration: none;
                 }
 
-                &.link {
+                .link {
                     position: relative;
+                    padding: 10px;
+                    border-radius: 0 25px 0 25px;
+                    -webkit-transition: all 0.5s ease-out;
+                    -moz-transition: all 0.5s ease-out;
+                    -o-transition: all 0.5s ease-out;
+                    transition: all 0.5s ease-out;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: rgba(204, 22, 204, 0.8);
+                    }
 
                     &::after {
                         content: '';
-                        background-color: colors.$accent-theme;
+                        background-color: colors.$font-header;
                         display: block;
                         position: absolute;
                         width: 0;
-                        height: defaults.$border-height / 2;
+                        height: math.div(defaults.$border-height, 2);
                         left: 50%;
-                        bottom: 10;
-                        transition: all 0.2s ease-in-out;
-                        transition-duration: 0.5s;
-                        opacity: 0;
+                        bottom: 0;
+                        opacity: 1;
                     }
                 }
 
                 .active {
-                    border-radius: 0 25px 0 25px;
-                    border: 1px solid orange;
-
                     &::after {
+                        -webkit-transition: all 0.5s ease-out;
+                        -moz-transition: all 0.5s ease-out;
+                        -o-transition: all 0.5s ease-out;
+                        transition: all 0.5s ease-out;
                         width: 100%;
-                        opacity: 1;
                         left: 0;
-                    }
-                }
-            }
-
-            .active {
-                li {
-                    color: red;
-                    background-color: rgba(204, 22, 204, 0.8);
-                }
-
-                &::after {
-                    width: 100%;
-                    opacity: 1;
-                    left: 0;
-                }
+                   }
+               }
             }
         }
     }
