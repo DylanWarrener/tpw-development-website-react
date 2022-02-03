@@ -6,10 +6,10 @@ import NavigationWithLogoAndSocials from '../navigation/logo-nav-socials/navigat
 // Style sheet  
 import './header.scss';
 
-const Header = () => {
+const Header = ({ logo }) => {
     return (
         <div id='header-container'>
-            <NavigationWithLogoAndSocials />
+            <NavigationWithLogoAndSocials logo={logo}/>
         </div>
     );
 }
