@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @use '../../abstracts/colors';
 @use '../../abstracts/fonts';
 @use '../../abstracts/defaults';
@@ -5,11 +7,11 @@
 #home-container {
     display: flex;
     flex-direction: column;
-    background-image: url('../../assets/static/background_temp.jpg');
+    align-items: flex-end;
+    background-image: url('../../assets/static/temp/home.jpg');
     background-position: center;
     background-size: 100%;
     height: 100vh;
-    align-items: flex-end;
 
     #content-container {
         display: flex;
@@ -27,7 +29,6 @@
             border-radius: 0 100px 0 100px;
 
             #title {
-                font-size: fonts.$size-home-heading;
                 margin-bottom: defaults.$padding-content / 2;
 
                 #highlight {
@@ -38,12 +39,11 @@
 
             #bottom {
                 display: flex;
-                flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
 
                 #subtitle {
-                    margin-right: 5vw;
+                    
                 }
             }
         }
