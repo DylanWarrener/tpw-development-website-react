@@ -1,13 +1,20 @@
-// Default react
 import React from 'react';
+
+// Components 
+import CanvasWithTitleSubtitleButton from '../../components/landing-page/others/canvas-with-title-subtitle-button';
 
 // Stylesheet
 import './kitchen.scss';
 
-const KitchenPage = () => {
+const KitchenPage = ({ images }) => {
     return (
         <div id='kitchen-container'>
-            Kitchen page
+            <CanvasWithTitleSubtitleButton 
+                title='THIS IS THE TITLE'
+                subtitle='Want a kitchen? See our collection.'
+                btnText='SEE OUR WORK'
+                src={images.landingPage}
+            />
         </div>
     );
 }
