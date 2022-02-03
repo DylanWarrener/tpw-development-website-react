@@ -19,6 +19,9 @@ import Footer from './components/footer/footer';
 // Test page
 import Test from './test';
 
+// Assets
+import Assets from './assets/assets';
+
 // Style sheet
 import './App.scss';
 
@@ -26,19 +29,75 @@ const App = () => {
   return (
     <div className="App">
       {/* <Test /> */}
-      <Header />
+      <Header logo={Assets.logo} />
       <Routes>
         <Route path='*' element={<ErrorPage />} />
-        <Route path='/' element={<HomePage />} />
-        <Route path='kitchens' element={<KitchenPage />} />
-        <Route path='bathrooms' element={<BathroomPage />} />
-        <Route path='newbuilds' element={<NewBuildPage />} />
-        <Route path='extensions' element={<ExtensionPage />} />
-        <Route path='refurbishments' element={<RefurbishmentPage />} />
-        <Route path='about' element={<AboutPage />} />
-        <Route path='contact' element={<ContactPage />} />
+        <Route 
+          path='/' 
+          element={
+            <HomePage 
+              images={Assets.images.home}
+            />
+          }
+        />
+        <Route 
+          path='kitchens' 
+          element={
+            <KitchenPage 
+              images={Assets.images.kitchen} 
+            />
+          } 
+        />
+        <Route 
+          path='bathrooms' 
+          element={
+            <BathroomPage 
+              images={Assets.images.bathroom}  
+            />
+          } 
+        />
+        <Route 
+          path='newbuilds' 
+          element={
+            <NewBuildPage 
+              images={Assets.images.newbuild}
+            />
+          }
+        />
+        <Route 
+          path='extensions' 
+          element={
+            <ExtensionPage 
+              images={Assets.images.extension}
+            />
+          } 
+        />
+        <Route 
+          path='refurbishments' 
+          element={
+            <RefurbishmentPage 
+              images={Assets.images.refurbishment}
+            />
+          } 
+        />
+        <Route 
+          path='about' 
+          element={
+            <AboutPage 
+              images={Assets.images.about}
+            />
+          } 
+        />
+        <Route 
+          path='contact' 
+          element={
+            <ContactPage 
+              images={Assets.images.contact}
+            />
+          } 
+        />
       </Routes>
-      <Footer />
+      <Footer socials={Assets.socials} />
     </div>
   );
 }
