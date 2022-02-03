@@ -3,6 +3,7 @@
 @use '../../../abstracts/defaults';
 
 #socials-container {
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,26 +11,25 @@
     background-color: colors.$secondary-theme;
     
     #socials-link {
-        width: auto;
-
+        border: 1px solid red;
+        width: 100%;
         display: flex;
         justify-content: space-around;
 
         .socials {
             width: 64px;
             height: 64px;
-            display: block;
-            margin: 10px;
-            background-color: colors.$primary-theme;
-
+            background-color: transparent;
             text-indent: 100%;
             white-space: nowrap;
             overflow: hidden;
+            -webkit-transition: all 0.5s ease-out;
+            -moz-transition: all 0.5s ease-out;
+            -o-transition: all 0.5s ease-out;
+            transition: all 0.5s ease-out;
 
             &:hover {
                 background-color: white;
-                transition: all 0.2s ease-in-out;
-                transition-duration: 0.3s;
             }
 
             &.facebook {
