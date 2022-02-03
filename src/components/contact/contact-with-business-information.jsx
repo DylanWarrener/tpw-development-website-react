@@ -9,14 +9,6 @@ import CustomFormInput from '../form/elements/input/input';
 import CustomSubmitButton from '../form/buttons/submit-button';
 import CustomTextarea from '../form/elements/textarea/textarea';
 
-// SVGs
-import { 
-    PhoneAccent,
-    EmailAccent,
-    TimeAccent,
-    LocationAccent
-} from '../../assets/assets';
-
 // Stylesheet
 import './contact-with-business-information.scss';
 
