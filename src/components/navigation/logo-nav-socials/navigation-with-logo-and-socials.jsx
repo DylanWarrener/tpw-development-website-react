@@ -3,24 +3,17 @@ import React from 'react';
 // React router
 import { NavLink } from 'react-router-dom';
 
-// Logo and social media SVG 
-import {
-    Logo, 
-    Facebook, 
-    Whatsapp
-} from '../../../assets/assets';
-
 // Navigation data
 import NAV_DATA from '../../../data/navigation';
 
 // Stylesheet 
 import './navigation-with-logo-and-socials.scss';
 
-const Navigation = () => {
+const Navigation = ({ logo }) => {
     return (
         <div id='nav-container'>
             <NavLink id='logo-container' to='/'>
-                <img id='logo' src={Logo} alt='logo'/>
+                <img id='logo' src={logo} alt='logo'/>
             </NavLink>
             <div id='nav-links-container'>
                 <ul id='nav-links'>
