@@ -15,6 +15,7 @@ const KitchenPage = ({ images }) => {
                 btnText='SEE OUR WORK'
                 src={images.landingPage}
             />
+            hello
         </div>
     );
 }
