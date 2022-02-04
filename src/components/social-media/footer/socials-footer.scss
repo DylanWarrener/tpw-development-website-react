@@ -3,7 +3,6 @@
 @use '../../../abstracts/defaults';
 
 #socials-container {
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,33 +10,37 @@
     background-color: colors.$secondary-theme;
     
     #socials-link {
-        border: 1px solid red;
-        width: 100%;
         display: flex;
         justify-content: space-around;
+        width: 100%;
 
         .socials {
-            width: 64px;
-            height: 64px;
-            background-color: transparent;
+            display: flex;
             text-indent: 100%;
             white-space: nowrap;
             overflow: hidden;
-            -webkit-transition: all 0.5s ease-out;
-            -moz-transition: all 0.5s ease-out;
-            -o-transition: all 0.5s ease-out;
-            transition: all 0.5s ease-out;
 
             &:hover {
-                background-color: white;
+                .facebook, .whatsapp-circle {
+                    fill: white;
+                }
             }
 
-            &.facebook {
-                background-image: url('../../../assets/static/socials/Facebook.svg');
+            .whatsapp-phone {
+                fill: colors.$whatsapp;
             }
 
-            &.whatsapp {
-                background-image: url('../../../assets/static/socials/Whatsapp.svg');
+            .facebook, .whatsapp {
+                width: 64px;
+                height: 64px;
+            }
+
+            .facebook, .whatsapp-circle {
+                -webkit-transition: all 0.5s ease-in-out;
+                -moz-transition: all 0.5s ease-in-out;
+                -o-transition: all 0.5s ease-in-out;
+                transition: all 0.5s ease-in-out;
+                fill: colors.$secondary-theme;
             }
         }
     }
