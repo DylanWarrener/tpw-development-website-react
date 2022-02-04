@@ -1,6 +1,6 @@
 // Socials
-import Facebook from './static/socials/Facebook.svg';
-import Whatsapp from './static/socials/Whatsapp.svg';
+import Facebook from './static/socials/facebook.svg';
+import Whatsapp from './static/socials/whatsapp.svg';
 
 // Logo
 import Logo from './static/logo/logo.svg';
