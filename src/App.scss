@@ -1,6 +1,6 @@
-@use './abstracts/fonts';
-@use './abstracts/colors';
-@use './abstracts/defaults';
+@use "./abstracts/fonts";
+@use "./abstracts/colors";
+@use "./abstracts/defaults";
 
 * {
   font-family: fonts.$family;
@@ -37,6 +37,10 @@ ul {
   padding: 0;
 }
 
-body, ul, p, h1, h3  {
-  margin: 0
+body,
+ul,
+p,
+h1,
+h3 {
+  margin: 0;
 }

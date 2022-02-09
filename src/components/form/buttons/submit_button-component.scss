@@ -1,0 +1,36 @@
+@use "../../../abstracts/colors.scss";
+@use "../../../abstracts/fonts.scss";
+@use "../../../abstracts/defaults.scss";
+
+#button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 12vw;
+  height: 5vh;
+  border: 2px solid white;
+  background-color: transparent;
+  color: colors.$font-footer;
+  font-size: fonts.$size-normal;
+
+  &:hover {
+    cursor: pointer;
+    border: none;
+    background-color: colors.$accent-theme;
+
+    #arrow {
+      transform: rotate(90deg);
+    }
+  }
+
+  #arrow {
+    width: 16px;
+    height: 16px;
+    fill: white;
+    -webkit-transition: defaults.$transition;
+    -ms-transition: defaults.$transition;
+    -moz-transition: defaults.$transition;
+    -o-transition: defaults.$transition;
+    transition: defaults.$transition;
+  }
+}

@@ -1,0 +1,25 @@
+@use '../../../abstracts/colors.scss';
+@use '../../../abstracts/fonts.scss';
+
+.text-area {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 20vh;
+    max-height: 40vh;
+    margin-bottom: 2px;
+    background-color: colors.$secondary-theme;
+    color: colors.$font-footer;
+    font-size: fonts.$size-normal;
+    border: none;
+    outline: none;
+
+    &::-webkit-input-placeholder {
+        color: colors.$font-footer;
+    }
+
+    &:focus {
+        &::-webkit-input-placeholder {
+            opacity: 50%;
+        }
+    }
+}
