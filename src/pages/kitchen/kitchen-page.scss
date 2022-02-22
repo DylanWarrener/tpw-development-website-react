@@ -1,3 +1,17 @@
+@use "../../abstracts/defaults.scss";
+
 #kitchen-container {
-    
+  #kitchen-content {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+
+    #work-card-container {
+      border: 1px solid blue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }

@@ -1,3 +1,21 @@
+@use "../../abstracts/colors.scss";
+
 #about-container {
-    
+  #about-content-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+
+    #title {
+      padding-bottom: 25px;
+    }
+
+    #employee-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }

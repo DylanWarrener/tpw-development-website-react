@@ -16,7 +16,8 @@ const CanvasWithTitleSubtitleButton = (props) => {
       <div className="content-container">
         <div className="content">
           <h1 className="title">
-            {props.title} <b className="highlight">{props.italic}?</b>
+            {props.title}
+            <b className="highlight"> {props.italic}</b>
           </h1>
           <div className="subtitle-button-container">
             <h3 className="subtitle">{props.subtitle}</h3>

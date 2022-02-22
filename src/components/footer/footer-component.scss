@@ -1,31 +1,31 @@
-@use '../../abstracts/colors';
+@use "../../abstracts/colors";
 
 #footer-container {
+  display: flex;
+  flex-direction: column;
+  background: colors.$background-footer;
+  color: colors.$font-footer;
+
+  #back-to-top-container {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    background: colors.$background-footer;
-    color: colors.$font-footer;
+    align-items: center;
+    justify-content: center;
+    background-color: colors.$accent-theme;
+    border: none;
+    width: 2.5vw;
+    height: 2.5vw;
+    top: 2.5vh;
+    left: 47.5vw;
 
-    #back-to-top-container {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: colors.$accent-theme;
-        border: none;
-        width: 2.5vw;
-        height: 2.5vw;
-        top: 2.5vh;
-        left: 47.5vw;
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        #up-arrow {
-            fill: colors.$background-body;
-            width: 32px;
-            height: 32px;
-        }
+    &:hover {
+      cursor: pointer;
     }
+
+    #up-arrow {
+      fill: colors.$background-body;
+      width: 32px;
+      height: 32px;
+    }
+  }
 }

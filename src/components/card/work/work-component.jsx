@@ -5,15 +5,18 @@ import "./work-component.scss";
 
 const WorkCard = (props) => {
   return (
-    <div
-      className="card-container"
-      style={{
-        background: `url(${props.src})`,
-      }}
-    >
-      <div className="before-and-after-container">
-        <div className="before">before image</div>
-        <div className="after">after image</div>
+    <div className="card-container">
+      <div className="picture-container">
+        <img
+          src={props.src}
+          className="before"
+          alt={`before ${props.alt} apperance`}
+        />
+        <img
+          src={props.src}
+          className="after"
+          alt={`after ${props.alt} apperance`}
+        />
       </div>
     </div>
   );
