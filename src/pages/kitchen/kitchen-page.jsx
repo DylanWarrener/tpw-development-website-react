@@ -1,11 +1,11 @@
 import React from "react";
 
 // Components
-import CanvasWithTitleSubtitleButton from "../../components/landing-page/others/canvas_with_title_subtitle_button-component";
-import WorkCard from "../../components/card/work/work-component";
+import CanvasWithTitleSubtitleButton from "../../components/landing-page/canvas_with_title_subtitle_button-component";
+import BeforeAndAfterJobCard from "../../components/card/work/before_and_after_job-card";
 
-// Image
-import Face from "../../assets/static/temp/face.jpg";
+import Image from "../../assets/static/temp/image.png";
+import KitchenImage from "../../assets/static/temp/kitchen.jpg";
 
 // Stylesheet
 import "./kitchen-page.scss";
@@ -21,9 +21,11 @@ const KitchenPage = (props) => {
         src={props.images.landingPage}
       />
       <div id="kitchen-content">
-        <div id="work-card-container">
-          <WorkCard src={Face} alt="kitchen" />
-        </div>
+        <BeforeAndAfterJobCard
+          before={KitchenImage}
+          after={KitchenImage}
+          alt="kitchen"
+        />
       </div>
     </div>
   );
