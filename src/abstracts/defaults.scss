@@ -1,6 +1,11 @@
-// Padding
-$padding-textarea: 8px 3px;
+// ----------IMPORTANT----------
+// Convert pixels to a better unit like rem or em
+
+// Content padding
+$padding-textarea: 10px 4px;
 $padding-content: 50px;
+$padding-input: 10px 3px;
+$padding-select: 10px 0;
 
 // Transitions
 $transition: all 0.2s ease-in-out;
